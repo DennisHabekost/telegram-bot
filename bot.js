@@ -101,4 +101,10 @@ bot.onText(/\/wetter (.+)/, async (msg, match) => {
     }
 });
 
+const http = require('http');
+http.createServer((req, res) => {
+    res.writeHead(200);
+    res.end('Bot läuft!');
+}).listen(process.env.PORT || 3000);
+
 console.log('Bot läuft! 🚀');
